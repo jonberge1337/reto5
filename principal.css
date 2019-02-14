@@ -344,3 +344,10 @@ body {
   color: white
 }
 
+/* #convenios, luego hay que descomentar para que no veamos la página entera desde el principio
+#colegiacion,
+#contratos,
+#formacion,
+#bolsaEmpleo{
+    display: none;
+} */
