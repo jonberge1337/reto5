@@ -1,0 +1,15 @@
+<rss version="2.0">
+<channel>
+<title>Reto 5</title>
+<description>Hecho por el grupo Tailandia</description>
+<image>
+<url>rssLogo.PNG</url>
+</image>
+
+<item>
+<title>CTSPV</title>
+<description>Los convenios existentes en el ámbito informático, sus contratos y la colegiación.</description>
+<link><index class="html">index.html</index></link>
+</item>
+</channel>
+</rss>

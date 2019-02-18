@@ -4,8 +4,26 @@ function inicializarEventos(e) {
     var busqueda = document.getElementById("busqueda");
     busqueda.addEventListener("keypress", buscar, false);
 
-    var pegajoso = document.getElementsByClassName("content")
-    pegajoso.addEventListener("scroll", pegar, false);
+    var inicio = document.getElementById("Inicio");
+    inicio.addEventListener("click", ocultarInicio("subInicio"), false);
+
+    var convenios = document.getElementById("Convenios");
+    convenios.addEventListener("click", ocultarConvenios, false);
+    
+    var colegiacion = document.getElementById("Colegiacion");
+    colegiacion.addEventListener("click", ocultarColegiacion, false);
+    
+    var contratos = document.getElementById("Contratos");
+    contratos.addEventListener("click", ocultarContratos, false);
+
+    var formacion = document.getElementById("Formacion");
+    formacion.addEventListener("click", ocultarFormacion, false);
+
+    var bolsa = document.getElementById("Bolsa");
+    bolsa.addEventListener("click", ocultarBolsa, false);
+
+    var contacto = document.getElementById("Contactanos");
+    contacto.addEventListener("click", ocultarContacto, false);
 }
 
 function buscar(e) {
@@ -17,12 +35,32 @@ function buscar(e) {
     }
 }
 
-function pegar(e) {
-    var menu = document.getElementById("menu");
-    var sticky = menu.offsetTop;
-    if (window.pageYOffset >= sticky) {
-        menu.classList.add("sticky")
-    } else {
-        menu.classList.remove("sticky");
-    }
+function ocultarInicio(e){
+    var array = ["subConevios", "subColegiacion", "subContratos", "subFormacion", "subBolsa"];
+    
+}
+
+function ocultarConvenios(e){
+    var array = ["subConevios", "subColegiacion", "subContratos", "subFormacion", "subBolsa"];
+    
+}
+
+function ocultarColegiacion(e) {
+    
+}
+
+function ocultarContratos(e) {
+    
+}
+
+function ocultarFormacion(e) {
+    
+}
+
+function ocultarBolsa(e) {
+    
+}
+
+function ocultarContacto(e) {
+    
 }
