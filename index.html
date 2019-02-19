@@ -32,13 +32,13 @@
 
         <!-- Menú principal -->
         <div id="menu" class="navbar">
-            <div id="Inicio" class="dropdown">
-                <button class="dropbtn"><a href="#home">Inicio</a></button>
+            <div class="dropdown">
+                <button id="Inicio" class="dropbtn">Inicio</button>
                 <!-- <a href="#home"  class ="dropbtn"  >Inicio</a> -->
 
             </div>
-            <div id="Convenios" class="dropdown">
-                <button class="dropbtn">Convenios
+            <div class="dropdown">
+                <button id="Convenios" class="dropbtn">Convenios
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -47,8 +47,8 @@
                     <a href="#">Enlaces</a>
                 </div>
             </div>
-            <div id="Colegiacion" class="dropdown">
-                <button class="dropbtn">Colegiación
+            <div class="dropdown">
+                <button id="Colegiacion" class="dropbtn">Colegiación
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -57,8 +57,8 @@
                     <a href="#">Incripción</a>
                 </div>
             </div>
-            <div id="Contratos" class="dropdown">
-                <button class="dropbtn">Modelos de contrato
+            <div class="dropdown">
+                <button id="Contratos" class="dropbtn">Modelos de contrato
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -67,8 +67,8 @@
                     <a href="#">Practivas</a>
                 </div>
             </div>
-            <div id="Formacion" class="dropdown">
-                <button class="dropbtn">Formación
+            <div class="dropdown">
+                <button id="Formacion" class="dropbtn">Formación
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -76,8 +76,12 @@
                     <a href="#">Seminarios</a>
                 </div>
             </div>
-            <div id="Bolsa" class="dropdown"><button class="dropbtn"><a href="#">Bolsa de empleo</a></button></div>
-            <div id="Contacto" class="dropdown"><button class="dropbtn"><a href="#">Contactanos</a></button></div>
+            <div class="dropdown">
+                <button id="Bolsa" class="dropbtn">Bolsa de empleo</button>
+            </div>
+            <div class="dropdown">
+                <button id="Contacto" class="dropbtn">Contáctanos</button>
+            </div>
 
         </div>
         <!-- /Menu principal -->
@@ -88,11 +92,17 @@
             <!-- Noticias -->
             <div id="noticias">
                 <h3>Noticias</h3>
-                <p><a href="https://www.eiieo.eus/ii-promocion-del-master-en-ingenieria-informatica-de-la-facultad-de-informatica-de-la-upv-ehu/" target="_blank">II promoción del Máster UPV/EHU</a> <span class="fecha">13/11/2018</span></p>
-                <p><a href="https://www.eiieo.eus/conferencia-internacional-de-testing-y-calidad-del-software-en-sistemas-embebidos-17a-edicion/" target="_blank">Conferencia testing y calidad del Software</a> <span class="fecha">25/09/2018</span></p>
-                <p><a href="https://www.eiieo.eus/la-colegiacion-es-obligatoria-tambien-para-los-funcionarios/" target="_blank">La colegiación es obligatoria</a> <span class="fecha">17/09/2018</span></p>
-                <p><a href="https://www.eiieo.eus/el-tribunal-supremo-confirma-la-legalidad-de-la-colegiacion-de-oficio-para-evitar-el-ejercicio-irregular-de-los-profesionales/" target="_blank">El TS confirma la legalidad de colegiación de oficio</a> <span class="fecha">11/09/2018</span></p>
-                <p><a href="https://www.eiieo.eus/adquisicion-y-presentacion-en-un-procedimiento-judicial-de-una-prueba-informatica/" target="_blank">Adquisición y presentación en un procedimiento judicial de una prueba informática.</a>
+                <p><a href="https://www.eiieo.eus/ii-promocion-del-master-en-ingenieria-informatica-de-la-facultad-de-informatica-de-la-upv-ehu/"
+                        target="_blank">II promoción del Máster UPV/EHU</a> <span class="fecha">13/11/2018</span></p>
+                <p><a href="https://www.eiieo.eus/conferencia-internacional-de-testing-y-calidad-del-software-en-sistemas-embebidos-17a-edicion/"
+                        target="_blank">Conferencia testing y calidad del Software</a> <span class="fecha">25/09/2018</span></p>
+                <p><a href="https://www.eiieo.eus/la-colegiacion-es-obligatoria-tambien-para-los-funcionarios/" target="_blank">La
+                        colegiación es obligatoria</a> <span class="fecha">17/09/2018</span></p>
+                <p><a href="https://www.eiieo.eus/el-tribunal-supremo-confirma-la-legalidad-de-la-colegiacion-de-oficio-para-evitar-el-ejercicio-irregular-de-los-profesionales/"
+                        target="_blank">El TS confirma la legalidad de colegiación de oficio</a> <span class="fecha">11/09/2018</span></p>
+                <p><a href="https://www.eiieo.eus/adquisicion-y-presentacion-en-un-procedimiento-judicial-de-una-prueba-informatica/"
+                        target="_blank">Adquisición y presentación en un procedimiento judicial de una prueba
+                        informática.</a>
                     <span class="fecha">19/06/2018</span></p>
 
             </div>
@@ -119,7 +129,7 @@
             <!-- Principal -->
             <div id="principal">
                 <!-- Inicio -->
-                <div class="articulo">
+                <div id="subInicio" class="articulo">
                     <h2>¿Quiénes somos?</h2>
 
                     <img src="quien.jpg" alt="¿Quienes somos?" />
@@ -220,9 +230,9 @@
                                 autoridad del médico. Beauchamp y Childress escriben que generalmente el dominio
                                 médico
                                 esos casos ha ido más allá de lo razonable.</p>
-                                <br />
+                            <br />
                         </li>
-                        
+
                         <li>
                             <p><strong>Principios de la Autonomía:</strong> de la Colaboración: Prosalus quiere
                                 abrirse
@@ -284,7 +294,7 @@
                                 adecuado de
                                 controles, que pueden ser políticas, normas, procedimientos, estructuras
                                 organizativas,
-                                equipos, prácticas y funciones de software.</p>                       
+                                equipos, prácticas y funciones de software.</p>
                         </li>
                     </ul>
                     <br />
@@ -446,8 +456,8 @@
                                 temporalmente durante un proceso de selección. La duración será lo que dure la
                                 causa.</p>
 
-                                <p>Modelo de Contrato:</p>
-                                <a href="contratos/ContratoTemporal.pdf">Contrato Temporal</a>
+                            <p>Modelo de Contrato:</p>
+                            <a href="contratos/ContratoTemporal.pdf">Contrato Temporal</a>
                         </li>
 
                         <li>
@@ -502,8 +512,8 @@
                                 trabajador
                                 tiene derecho al finiquito, como cuando finaliza cualquier otro tipo de
                                 contrato.</p>
-                                <p>Modelo de Contrato:</p>
-                                <a href="contratos/ContratoIndefinido.pdf">Contrato Indefinido</a>
+                            <p>Modelo de Contrato:</p>
+                            <a href="contratos/ContratoIndefinido.pdf">Contrato Indefinido</a>
                         </li>
 
                         <li>
@@ -598,9 +608,9 @@
                                 otro lado, en este contrato se incentivará a las empresas con una reducción de
                                 la cuota
                                 empresarial a la Seguridad Social de hasta el 50%.</p>
-                                
-                                <p>Modelo de Contrato:</p>
-                                <a href="contratos/ContratoPracticas.pdf">Contrato de Prácticas</a>
+
+                            <p>Modelo de Contrato:</p>
+                            <a href="contratos/ContratoPracticas.pdf">Contrato de Prácticas</a>
                         </li>
 
                         <li>
@@ -659,8 +669,8 @@
                                 concretar estos contratos por una duración inferior a siete días, supone un
                                 incremento en las cuotas de contingencias comunes del 36 a la Seguridad Social.</p>
 
-                                <p>Modelo de Contrato:</p>
-                                <a href="contratos/ContratoEventual.pdf">Contrato Eventual</a>
+                            <p>Modelo de Contrato:</p>
+                            <a href="contratos/ContratoEventual.pdf">Contrato Eventual</a>
                         </li>
 
                     </ul>
@@ -1028,9 +1038,9 @@
                         nuevos
                         proyectos del Grupo.</p>
 
-                        <p>Funciones:</p>
+                    <p>Funciones:</p>
                     <ul>
-                       
+
                         <li>Mantenimiento general de la Infraestructura informática de la empresa,
                             gestionando recursos externos y coordinándose con el resto de áreas I.T.
                             corporativas, así como aportar nuevas soluciones.</li>
@@ -1072,9 +1082,9 @@
                         contributions upstream: Linux Kernel, Gstreamer, OpenEmbedded, Coreboot,
                         U-Boot…</p>
 
-                        <p>What you will be doing:</p>
+                    <p>What you will be doing:</p>
                     <ul>
-                    
+
                         <li>Specify and develop new core functionality for the cameras.</li>
                         <li>Integration of complex systems for live streaming/ broadcasting of live
                             events.</li>
@@ -1401,7 +1411,7 @@
                 Copyleft Thailand Team
             </span>
             <div class="clear"></div>
-            
+
         </div>
         <!-- /Pie -->
 
