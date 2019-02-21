@@ -11,6 +11,7 @@
 </head>
 
 <body>
+&#9760;
     <!-- Contenedor -->
     <div id="contenedor">
 
@@ -391,23 +392,23 @@
                     </ul>
 
                     <h2>Requisitos para colegiarte</h2>
-                    
-                        <p>Para poderte colegiar es necesario tener alguno de los títulos universitarios siguientes:</p>
-                        <ul>
-                            <li>Licenciado en Informática</li>
-                            <li>Ingeniero en Informática</li>
-                            <li>Máster en Ingeniera en Informática, reconocido por ANECA como título habilitante para
-                                la profesión de Ingeniero en Informática.</li>
-                            <li>Título extranjero, debidamente convalidado conforme a la legislación española.</li>
-                        </ul>
-                        <p>Aportar:</p>
-                        <ul>
-                            <li>Copia debidamente compulsada del título universitario o de la certificación que
-                                acredite estar en posesión del título (cualquiera de los mencionados anteriormente).</li>
-                            <li>El DNI o pasaporte o documento equivalente.</li>
-                            <li>Una fotografía tamaño carnet</li>
-                        </ul>
-                    
+
+                    <p>Para poderte colegiar es necesario tener alguno de los títulos universitarios siguientes:</p>
+                    <ul>
+                        <li>Licenciado en Informática</li>
+                        <li>Ingeniero en Informática</li>
+                        <li>Máster en Ingeniera en Informática, reconocido por ANECA como título habilitante para
+                            la profesión de Ingeniero en Informática.</li>
+                        <li>Título extranjero, debidamente convalidado conforme a la legislación española.</li>
+                    </ul>
+                    <p>Aportar:</p>
+                    <ul>
+                        <li>Copia debidamente compulsada del título universitario o de la certificación que
+                            acredite estar en posesión del título (cualquiera de los mencionados anteriormente).</li>
+                        <li>El DNI o pasaporte o documento equivalente.</li>
+                        <li>Una fotografía tamaño carnet</li>
+                    </ul>
+
                     <br />
                     <h2>Para poderte colegiar es necesario tener alguno de los títulos universitarios
                         siguientes:</h2>
@@ -1135,6 +1136,100 @@
                     </ul>
                 </div>
                 <!-- /Bolsa de Empleo -->
+
+                <!-- Contactanos -->
+                <div id="subContacto">
+                    <h1>Datos del pedido</h1>
+                    <form id="datosPedido" method="get" action="#">
+                        <fieldset>
+                            <legend>Datos personales</legend>
+
+                            <label class="descripcion" for="apellidosynombre">Apellidos y nombre (obligatorio):</label>
+                            <p class="error" id="errorNombre">Este campo es obligatorio</p>
+                            <input class="texto" id="apellidosynombre" type="text" size="60" />
+
+                            <label class="descripcion" for="dni">DNI <span class="ejemplo">p.e. 34354345C</span>
+                                (obligatorio):</label>
+                            <p class="error" id="errorDni">Este campo es obligatorio</p>
+                            <input class="texto" id="dni" type="text" size="60" />
+
+                            <label for="email" class="descripcion">E-mail (obligatorio):</label>
+                            <p class="error" id="errorEmail">Este campo es obligatorio</p>
+                            <input type="text" class="textbox" id="email" size="60" />
+
+                            <label class="descripcion" for="direccion"> Dirección (obligatorio):</label>
+                            <p class="error" id="errorDireccion">Este campo es obligatorio</p>
+                            <input name="direccion" type="text" size="60" id="direccion" />
+
+                            <label class="descripcion" for="poblacion">Población (obligatorio):</label>
+                            <p class="error" id="errorPoblacion">Este campo es obligatorio</p>
+                            <input name="poblacion" type="text" size="60" id="poblacion" />
+
+                            <label class="descripcion" for="cp"> Código postal (obligatorio):</label>
+                            <p class="error" id="errorCp">Este campo es obligatorio</p>
+                            <input name="cp" type="text" size="20" maxlength="5" id="cp" />
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Datos de pago</legend>
+
+                            <label class="descripcion" for="visa">Tarjeta: </label>
+                            <label for="visa">Visa <input id="visa" type="radio" value="V" checked="checked" name="tarjeta" /></label>
+                            <label for="mastercard">MasterCard <input id="mastercard" type="radio" value="M" name="tarjeta" /></label>
+
+                            <label class="descripcion" for="numerotarjeta">Número de tarjeta (obligatorio): </label>
+                            <p class="error" id="errorCard">Este campo es obligatorio</p>
+                            <input name="numerotarjeta" type="text" size="20" id="card" />
+
+                            <label class="descripcion" for="mes">Fecha de caducidad: </label>
+                            <label>Mes:</label>
+                            <select name="mes">
+                                <option value="01">Enero</option>
+                                <option value="02">Febrero</option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Abril</option>
+                                <option value="05">Mayo</option>
+                                <option value="06">Junio</option>
+                                <option value="07">Julio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                            <label>Año: </label>
+                            <select name="anno">
+                                <option value="2013">2013</option>
+                                <option value="2014">2014</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Datos de envío</legend>
+                            <label for="misma" class="descripcion">Es la misma dirección
+                                <input name="mismadireccion" id="misma" type="checkbox" value="lamisma" checked="checked" />
+                            </label>
+                            <div class="ejemplo">Debe rellenar estos campos si la dirección de envío es
+                                distinta</div>
+                            <label class="descripcion" for="direccionenvio"> Dirección:</label>
+                            <input name="direccionenvio" type="text" size="60" />
+                            <label class="descripcion" for="poblaciónenvio">Población:</label>
+                            <input name="poblacionenvio" type="text" size="60" />
+                            <label class="descripcion" for="cpenvio"> Código postal:</label>
+                            <input name="cpenvio" type="text" size="20" maxlength="5" />
+                            <label class="descripcion" for="preferencias">Preferencias de envío: </label>
+                            <textarea rows="5" cols="60" name="preferencias"></textarea>
+                        </fieldset>
+                        <div>
+                            <a href="informacion.html"><input type="submit" name="enviar" value="Enviar pedido" id="enviar" /></a>
+                        </div>
+                    </form>
+                </div>
+                <!-- Contactanos -->
 
                 <!-- Información legal y politica de cookies -->
                 <div id="subCookies" class="articulo">
