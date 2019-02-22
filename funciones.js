@@ -4,31 +4,31 @@ function inicializarEventos(e) {
     var busqueda = document.getElementById("busqueda");
     busqueda.addEventListener("keypress", buscar, false);
 
-    var inicio = document.getElementById("Inicio");
+    var inicio = document.getElementById("inicio");
     inicio.addEventListener("click", ocultar, false);
 
-    var convenios = document.getElementById("Convenios");
+    var convenios = document.getElementById("convenios");
     convenios.addEventListener("click", ocultar, false);
 
-    var colegiacion = document.getElementById("Colegiacion");
+    var colegiacion = document.getElementById("colegiacion");
     colegiacion.addEventListener("click", ocultar, false);
 
-    var contratos = document.getElementById("Contratos");
+    var contratos = document.getElementById("contratos");
     contratos.addEventListener("click", ocultar, false);
 
-    var formacion = document.getElementById("Formacion");
+    var formacion = document.getElementById("formacion");
     formacion.addEventListener("click", ocultar, false);
 
-    var bolsa = document.getElementById("Bolsa");
+    var bolsa = document.getElementById("bolsa");
     bolsa.addEventListener("click", ocultar, false);
 
-    var contacto = document.getElementById("Contacto");
+    var contacto = document.getElementById("contacto");
     contacto.addEventListener("click", ocultar, false);
 
-    var contacto = document.getElementById("Cookies");
+    var contacto = document.getElementById("cookies");
     contacto.addEventListener("click", ocultar, false);
 
-    var contacto = document.getElementById("Privacidad");
+    var contacto = document.getElementById("privacidad");
     contacto.addEventListener("click", ocultar, false);
 }
 
@@ -66,49 +66,55 @@ function ocultar(e) {
     //     document.getElementById("subConvenios").style.display = "inline";
     // }
 
-    if (boton.id == "Inicio") {
+    if (boton.id == "inicio") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }
         document.getElementById("subInicio").style.display = "inline";
 
-    }else if (boton.id =="Convenios") {
+    }else if (boton.id =="convenios") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }
         document.getElementById("subConvenios").style.display = "inline";
 
-    }else if (boton.id == "Colegiacion") {
+    }else if (boton.id == "colegiacion") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }
         document.getElementById("subColegiacion").style.display = "inline";
 
-    }else if (boton.id == "Contratos") {
+    }else if (boton.id == "contratos") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }
         document.getElementById("subContratos").style.display = "inline";
 
-    }else if (boton.id.localeCompare("Formacion")) {
+    }else if (boton.id == "formacion") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }
         document.getElementById("subFormacion").style.display = "inline";
 
-    }else if (boton.id.localeCompare("Bolsa")) {
+    }else if (boton.id == "bolsa") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }
         document.getElementById("subBolsa").style.display = "inline";
+        
+    }else if (boton.id == "contacto") {
+        for (var i = 0; i < array.length; i++) {
+            document.getElementById(array[i]).style.display = "none";
+        }
+        document.getElementById("subContacto").style.display = "inline";
 
-    }else if (boton.id.localeCompare("Cookies")) {
+    }else if (boton.id == "cookies") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }
         document.getElementById("subCookies").style.display = "inline";
 
-    }else if (boton.id.localeCompare("Privacidad")) {
+    }else if (boton.id == "privacidad") {
         for (var i = 0; i < array.length; i++) {
             document.getElementById(array[i]).style.display = "none";
         }

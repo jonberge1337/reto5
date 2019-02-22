@@ -34,12 +34,12 @@
         <!-- Menú principal -->
         <div id="menu" class="navbar">
             <div class="dropdown">
-                <button id="Inicio" class="dropbtn">Inicio</button>
+                <button id="inicio" class="dropbtn">Inicio</button>
                 <!-- <a href="#home"  class ="dropbtn"  >Inicio</a> -->
 
             </div>
             <div class="dropdown">
-                <button id="Convenios" class="dropbtn">Convenios
+                <button id="convenios" class="dropbtn">Convenios
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button id="Colegiacion" class="dropbtn">Colegiación
+                <button id="colegiacion" class="dropbtn">Colegiación
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button id="Contratos" class="dropbtn">Modelos de contrato
+                <button id="contratos" class="dropbtn">Modelos de contrato
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button id="Formacion" class="dropbtn">Formación
+                <button id="formacion" class="dropbtn">Formación
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -78,10 +78,10 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button id="Bolsa" class="dropbtn">Bolsa de empleo</button>
+                <button id="bolsa" class="dropbtn">Bolsa de empleo</button>
             </div>
             <div class="dropdown">
-                <button id="Contacto" class="dropbtn">Contáctanos</button>
+                <button id="contacto" class="dropbtn">Contáctanos</button>
             </div>
 
         </div>
@@ -430,6 +430,44 @@
                         <li>El DNI o pasaporte o documento equivalente.</li>
                         <li class="">Una fotografía tamaño carnet</li>
                     </ul>
+
+                    <div id="subInscripcion">
+                        <h1>Datos para Inscribirse</h1>
+                        <form id="datosInscripcion" method="get" action="#">
+                            <fieldset>
+                                <legend>Datos personales</legend>
+    
+                                <label class="descripcion" for="apellidosynombre">Apellidos y nombre (obligatorio):</label>
+                                <p class="error" id="errorNombre">Este campo es obligatorio</p>
+                                <input class="texto" id="apellidosynombre" type="text" size="60" />
+    
+                                <label class="descripcion" for="dni">DNI <span class="ejemplo">p.e. 34354345C</span>
+                                    (obligatorio):</label>
+                                <p class="error" id="errorDni">Este campo es obligatorio</p>
+                                <input class="texto" id="dni" type="text" size="60" />
+    
+                                <label for="email" class="descripcion">E-mail (obligatorio):</label>
+                                <p class="error" id="errorEmail">Este campo es obligatorio</p>
+                                <input type="text" class="textbox" id="email" size="60" />
+    
+                                <label class="descripcion" for="direccion"> Dirección (obligatorio):</label>
+                                <p class="error" id="errorDireccion">Este campo es obligatorio</p>
+                                <input name="direccion" type="text" size="60" id="direccion" />
+    
+                                <label class="descripcion" for="poblacion">Población (obligatorio):</label>
+                                <p class="error" id="errorPoblacion">Este campo es obligatorio</p>
+                                <input name="poblacion" type="text" size="60" id="poblacion" />
+    
+                                <label class="descripcion" for="cp"> Código postal (obligatorio):</label>
+                                <p class="error" id="errorCp">Este campo es obligatorio</p>
+                                <input name="cp" type="text" size="20" maxlength="5" id="cp" />
+                            </fieldset>
+    
+                            <div>
+                                <a href="informacion.html"><input type="submit" name="enviar" value="Enviar pedido" id="enviar" /></a>
+                            </div>
+                        </form>
+                    </div>
 
                 </div>
 
@@ -1139,7 +1177,7 @@
 
                 <!-- Contactanos -->
                 <div id="subContacto">
-                    <h1>Datos del pedido</h1>
+                    <h1>Datos del usuario</h1>
                     <form id="datosPedido" method="get" action="#">
                         <fieldset>
                             <legend>Datos personales</legend>
