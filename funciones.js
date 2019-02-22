@@ -45,7 +45,7 @@ function buscar(e) {
 function ocultar(e) {
     // e.target es otra propiedad del evento, para saber el botón que se ha pulsado
     var boton = e.target;
-    var array = ["subInicio", "subConvenios", "subColegiacion", "subContratos", "subFormacion", "subBolsa", "subCookies", "subPrivacidad"];
+    var array = ["subInicio", "subConvenios", "subColegiacion", "subContratos", "subFormacion", "subBolsa", "subCookies", "subPrivacidad", "subContacto"];
     // if (boton.id == "Inicio") {
     // document.getElementById("subConvenios").style.display = "none";
     // document.getElementById("subColegiacion").style.display = "none";
