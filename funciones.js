@@ -78,270 +78,247 @@ function ocultar(e) {
     var boton = e.target;
     var array = ["subInicio", "subConvenios", "subColegiacion", "subContratos", "subFormacion", "subBolsa", "subCookies", "subPrivacidad", "subContacto"];
 
+    for (var i = 0; i < array.length; i++) {
+        document.getElementById(array[i]).style.display = "none";
+    }
+
     if (boton.id == "inicio") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subInicio").style.display = "inline";
 
     } else if (boton.id == "convenios") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subConvenios").style.display = "inline";
 
     } else if (boton.id == "colegiacion") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subColegiacion").style.display = "inline";
 
     } else if (boton.id == "contratos") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subContratos").style.display = "inline";
 
     } else if (boton.id == "formacion") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subFormacion").style.display = "inline";
 
     } else if (boton.id == "bolsa") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subBolsa").style.display = "inline";
 
     } else if (boton.id == "contacto") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subContacto").style.display = "inline";
 
     } else if (boton.id == "cookies") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subCookies").style.display = "inline";
 
     } else if (boton.id == "privacidad") {
-        for (var i = 0; i < array.length; i++) {
-            document.getElementById(array[i]).style.display = "none";
-        }
         document.getElementById("subPrivacidad").style.display = "inline";
     }
 }
 
-    // Formulario para Inscripción y "Contáctanos"
-    function verificarNombre() {
-        var valor = document.getElementById("apellidosynombre").value;
-        var expreg = /^[a-zñ ]+$/i;
-        if (!expreg.test(valor)) {
-            document.getElementById("errorNombre").style.display = "block";
-        }
+// Formulario para Inscripción y "Contáctanos"
+function verificarNombre() {
+    var valor = document.getElementById("apellidosynombre").value;
+    var expreg = /^[a-zñ ]+$/i;
+    if (!expreg.test(valor)) {
+        document.getElementById("errorNombre").style.display = "block";
+    }
+}
+
+function reiniciarNombre() {
+    var x = document.getElementById("errorNombre");
+    if (x.style.display == "block") {
+        var valor = document.getElementById("apellidosynombre").value = "";
+        x.style.display = "none";
+    }
+}
+
+function verificarDNI() {
+    var valor = document.getElementById("dni").value;
+    var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+    if (!(/^\d{8}[A-Z]$/.test(valor))) {
+        document.getElementById("errorDni").style.display = "block";
     }
 
-    function reiniciarNombre() {
-        var x = document.getElementById("errorNombre");
-        if (x.style.display == "block") {
-            var valor = document.getElementById("apellidosynombre").value = "";
-            x.style.display = "none";
-        }
+    if (valor.charAt(8) != letras[(valor.substring(0, 8)) % 23]) {
+        document.getElementById("errorDni").style.display = "block";
+    }
+}
+
+function reiniciarDNI() {
+    var x = document.getElementById("errorDni");
+    if (x.style.display == "block") {
+        var valor = document.getElementById("dni").value = "";
+        x.style.display = "none";
+    }
+}
+
+function verificarEmail() {
+    var valor = document.getElementById("email").value;
+    var expreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    if (!expreg.test(valor)) {
+        document.getElementById("errorEmail").style.display = "block";
     }
 
-    function verificarDNI() {
-        var valor = document.getElementById("dni").value;
-        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+}
 
-        if (!(/^\d{8}[A-Z]$/.test(valor))) {
-            document.getElementById("errorDni").style.display = "block";
-        }
-
-        if (valor.charAt(8) != letras[(valor.substring(0, 8)) % 23]) {
-            document.getElementById("errorDni").style.display = "block";
-        }
+function reiniciarEmail() {
+    var x = document.getElementById("errorEmail");
+    if (x.style.display == "block") {
+        var valor = document.getElementById("email").value = "";
+        x.style.display = "none";
     }
+}
 
-    function reiniciarDNI() {
-        var x = document.getElementById("errorDni");
-        if (x.style.display == "block") {
-            var valor = document.getElementById("dni").value = "";
-            x.style.display = "none";
-        }
+function verificarDireccion() {
+    var valor = document.getElementById("direccion").value;
+    var expreg = /^[a-zñ /º 0-9]+$/i;
+    if (!expreg.test(valor)) {
+        document.getElementById("errorDireccion").style.display = "block";
     }
+}
 
-    function verificarEmail() {
-        var valor = document.getElementById("email").value;
-        var expreg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-        if (!expreg.test(valor)) {
-            document.getElementById("errorEmail").style.display = "block";
-        }
-
+function reiniciarDireccion() {
+    var x = document.getElementById("errorDireccion");
+    if (x.style.display == "block") {
+        var valor = document.getElementById("direccion").value = "";
+        x.style.display = "none";
     }
+}
 
-    function reiniciarEmail() {
-        var x = document.getElementById("errorEmail");
-        if (x.style.display == "block") {
-            var valor = document.getElementById("email").value = "";
-            x.style.display = "none";
-        }
+function verificarPoblacion() {
+    var valor = document.getElementById("poblacion").value;
+    var expreg = /^[a-zñ ]+$/i;
+    if (!expreg.test(valor)) {
+        document.getElementById("errorPoblacion").style.display = "block";
     }
+}
 
-    function verificarDireccion() {
-        var valor = document.getElementById("direccion").value;
-        var expreg = /^[a-zñ /º 0-9]+$/i;
-        if (!expreg.test(valor)) {
-            document.getElementById("errorDireccion").style.display = "block";
-        }
+function reiniciarPoblacion() {
+    var x = document.getElementById("errorPoblacion");
+    if (x.style.display == "block") {
+        var valor = document.getElementById("poblacion").value = "";
+        x.style.display = "none";
     }
+}
 
-    function reiniciarDireccion() {
-        var x = document.getElementById("errorDireccion");
-        if (x.style.display == "block") {
-            var valor = document.getElementById("direccion").value = "";
-            x.style.display = "none";
-        }
+function verificarCp() {
+    var valor = document.getElementById("cp").value;
+    var expreg = /^\d{5}$/;
+    if (!expreg.test(valor)) {
+        document.getElementById("errorCp").style.display = "block";
     }
+}
 
-    function verificarPoblacion() {
-        var valor = document.getElementById("poblacion").value;
-        var expreg = /^[a-zñ ]+$/i;
-        if (!expreg.test(valor)) {
-            document.getElementById("errorPoblacion").style.display = "block";
-        }
+function reiniciarCp() {
+    var x = document.getElementById("errorCp");
+    if (x.style.display == "block") {
+        var valor = document.getElementById("cp").value = "";
+        x.style.display = "none";
     }
+}
 
-    function reiniciarPoblacion() {
-        var x = document.getElementById("errorPoblacion");
-        if (x.style.display == "block") {
-            var valor = document.getElementById("poblacion").value = "";
-            x.style.display = "none";
-        }
+function verificarCard() {
+    var valor = document.getElementById("card").value;
+    var expreg = /^\d{4}[ -]{0,1}\d{4}[ -]{0,1}\d{4}[ -]{0,1}\d{4}$/;
+    if (!expreg.test(valor)) {
+        document.getElementById("errorCard").style.display = "block";
     }
+}
 
-    function verificarCp() {
-        var valor = document.getElementById("cp").value;
-        var expreg = /^\d{5}$/;
-        if (!expreg.test(valor)) {
-            document.getElementById("errorCp").style.display = "block";
-        }
+function reiniciarCard() {
+    var x = document.getElementById("errorCard");
+    if (x.style.display == "block") {
+        var valor = document.getElementById("card").value = "";
+        x.style.display = "none";
     }
+}
 
-    function reiniciarCp() {
-        var x = document.getElementById("errorCp");
-        if (x.style.display == "block") {
-            var valor = document.getElementById("cp").value = "";
-            x.style.display = "none";
-        }
-    }
+function renovar(e) {
+    var x = document.getElementById("principal");
+    var nombre = document.getElementById("apellidosynombre").value;
+    x.style.visibility = "hidden"
+    document.write("<h1>PedidoEnviado:</h1> " + nombre);
+}
 
-    function verificarCard() {
-        var valor = document.getElementById("card").value;
-        var expreg = /^\d{4}[ -]{0,1}\d{4}[ -]{0,1}\d{4}[ -]{0,1}\d{4}$/;
-        if (!expreg.test(valor)) {
-            document.getElementById("errorCard").style.display = "block";
-        }
-    }
+// if(boton.id.localeCompare("Convenios")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 1) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
 
-    function reiniciarCard() {
-        var x = document.getElementById("errorCard");
-        if (x.style.display == "block") {
-            var valor = document.getElementById("card").value = "";
-            x.style.display = "none";
-        }
-    }
+// if(boton.id.localeCompare("Colegiacion")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 2) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
 
-    function renovar(e) {
-        var x = document.getElementById("principal");
-        var nombre = document.getElementById("apellidosynombre").value;
-        x.style.visibility = "hidden"
-        document.write("<h1>PedidoEnviado:</h1> " + nombre);
-    }
+// if(boton.id.localeCompare("Contratos")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 3) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
 
-    // if(boton.id.localeCompare("Convenios")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 1) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
+// if(boton.id.localeCompare("Formacion")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 4) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
 
-    // if(boton.id.localeCompare("Colegiacion")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 2) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
+// if(boton.id.localeCompare("Bolsa")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 5) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
 
-    // if(boton.id.localeCompare("Contratos")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 3) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
+// if(boton.id.localeCompare("Contacto")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 6) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
 
-    // if(boton.id.localeCompare("Formacion")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 4) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
+// if(boton.id.localeCompare("Cookies")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 7) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
 
-    // if(boton.id.localeCompare("Bolsa")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 5) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
+// if(boton.id.localeCompare("Privacidad")){
+//     for(var i = 0; i < array.length; i++){
+//         if (i != 8) {
+//             document.getElementById(array[i]).style.display = "none";
+//         }
+//     }
+// }
+// document.getElementById("subConvenios").style.display = "none";
+// document.getElementById("subColegiacion").style.display = "none";
+// document.getElementById("subContratos").style.display = "none";
+// document.getElementById("subFormacion").style.display = "none";
+// document.getElementById("subBolsa").style.display = "none";    
 
-    // if(boton.id.localeCompare("Contacto")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 6) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
+// }// else if(boton.id == "Convenios"){
 
-    // if(boton.id.localeCompare("Cookies")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 7) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
+// }else if(boton.id == "Colegiacion"){
 
-    // if(boton.id.localeCompare("Privacidad")){
-    //     for(var i = 0; i < array.length; i++){
-    //         if (i != 8) {
-    //             document.getElementById(array[i]).style.display = "none";
-    //         }
-    //     }
-    // }
-    // document.getElementById("subConvenios").style.display = "none";
-    // document.getElementById("subColegiacion").style.display = "none";
-    // document.getElementById("subContratos").style.display = "none";
-    // document.getElementById("subFormacion").style.display = "none";
-    // document.getElementById("subBolsa").style.display = "none";    
+// }else if(boton.id == "Contratos"){
 
-    // }// else if(boton.id == "Convenios"){
+// }else if(boton.id == "Formacion"){
 
-    // }else if(boton.id == "Colegiacion"){
+// }else if(boton.id == "Bolsa"){
 
-    // }else if(boton.id == "Contratos"){
+// }else if(boton.id == "Contacto"){
 
-    // }else if(boton.id == "Formacion"){
-
-    // }else if(boton.id == "Bolsa"){
-
-    // }else if(boton.id == "Contacto"){
-
-    // }
+// }
 
 
 // window.addEventListener('load',inicializarEventos,false);
