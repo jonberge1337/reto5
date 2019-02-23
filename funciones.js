@@ -11,13 +11,46 @@ function inicializarEventos(e) {
     var convenios = document.getElementById("convenios");
     convenios.addEventListener("click", ocultar, false);
 
+    var convenios = document.getElementById("IDconQuien");
+    convenios.addEventListener("click", ocultar, false);
+
+    var convenios = document.getElementById("IDdesdeCuando");
+    convenios.addEventListener("click", ocultar, false);
+
+    var convenios = document.getElementById("IDenlaces");
+    convenios.addEventListener("click", ocultar, false);
+
     var colegiacion = document.getElementById("colegiacion");
+    colegiacion.addEventListener("click", ocultar, false);
+
+    var colegiacion = document.getElementById("IDrazones");
+    colegiacion.addEventListener("click", ocultar, false);
+
+    var colegiacion = document.getElementById("IDrequisitos");
+    colegiacion.addEventListener("click", ocultar, false);
+
+    var colegiacion = document.getElementById("IDinscripcion");
     colegiacion.addEventListener("click", ocultar, false);
 
     var contratos = document.getElementById("contratos");
     contratos.addEventListener("click", ocultar, false);
+    
+    var contratos = document.getElementById("IDtemporal");
+    contratos.addEventListener("click", ocultar, false);
+    
+    var contratos = document.getElementById("IDindefinido");
+    contratos.addEventListener("click", ocultar, false);
+
+    var contratos = document.getElementById("IDpracticas");
+    contratos.addEventListener("click", ocultar, false);
 
     var formacion = document.getElementById("formacion");
+    formacion.addEventListener("click", ocultar, false);
+
+    var formacion = document.getElementById("IDcursos");
+    formacion.addEventListener("click", ocultar, false);
+
+    var formacion = document.getElementById("IDseminarios");
     formacion.addEventListener("click", ocultar, false);
 
     var bolsa = document.getElementById("bolsa");
@@ -56,9 +89,9 @@ function inicializarEventos(e) {
     cp.addEventListener("blur", verificarCp, false);
     cp.addEventListener("focus", reiniciarCp, false);
 
-    var card = document.getElementById("card");
-    card.addEventListener("blur", verificarCard, false);
-    card.addEventListener("focus", reiniciarCard, false);
+    // var card = document.getElementById("card");
+    // card.addEventListener("blur", verificarCard, false);
+    // card.addEventListener("focus", reiniciarCard, false);
 
     var boton = document.getElementById("enviar");
     boton.addEventListener("click", renovar, false);
@@ -91,7 +124,7 @@ function ocultar(e) {
     // e.target es otra propiedad del evento, para saber el botón que se ha pulsado
     var boton = e.target;
     var array = ["subInicio", "subConvenios", "subColegiacion", "subContratos", "subFormacion", "subBolsa", "subCookies", "subPrivacidad", "subContacto"];
-
+    // Oculta todo el html, pero cuando damos al boton (Usando el IF) que nos interesa nos muestra dicha parte del HTML
     for (var i = 0; i < array.length; i++) {
         document.getElementById(array[i]).style.display = "none";
     }
@@ -99,16 +132,16 @@ function ocultar(e) {
     if (boton.id == "inicio") {
         document.getElementById("subInicio").style.display = "inline";
 
-    } else if (boton.id == "convenios") {
+    } else if (boton.id == "convenios" || boton.id == "IDconQuien" || boton.id == "IDdesdeCuando" || boton.id == "IDenlaces") {
         document.getElementById("subConvenios").style.display = "inline";
 
-    } else if (boton.id == "colegiacion") {
+    } else if (boton.id == "colegiacion" || boton.id == "IDrequisitos" || boton.id == "IDinscripcion" || boton.id == "IDrazones") {
         document.getElementById("subColegiacion").style.display = "inline";
 
-    } else if (boton.id == "contratos") {
+    } else if (boton.id == "contratos" || boton.id == "IDtemporal" || boton.id == "IDindefinido" || boton.id == "IDpracticas") {
         document.getElementById("subContratos").style.display = "inline";
 
-    } else if (boton.id == "formacion") {
+    } else if (boton.id == "formacion" || boton.id == "IDcursos" || boton.id == "IDseminarios") {
         document.getElementById("subFormacion").style.display = "inline";
 
     } else if (boton.id == "bolsa") {
@@ -228,21 +261,6 @@ function reiniciarCp() {
     }
 }
 
-function verificarCard() {
-    var valor = document.getElementById("card").value;
-    var expreg = /^\d{4}[ -]{0,1}\d{4}[ -]{0,1}\d{4}[ -]{0,1}\d{4}$/;
-    if (!expreg.test(valor)) {
-        document.getElementById("errorCard").style.display = "block";
-    }
-}
-
-function reiniciarCard() {
-    var x = document.getElementById("errorCard");
-    if (x.style.display == "block") {
-        var valor = document.getElementById("card").value = "";
-        x.style.display = "none";
-    }
-}
 
 function renovar(e) {
     var x = document.getElementById("principal");
