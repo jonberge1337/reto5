@@ -1,4 +1,5 @@
 window.addEventListener('load', inicializarEventos, false);
+window.addEventListener('load', inicializarModal, false);
 
 function inicializarEventos(e) {
     var busqueda = document.getElementById("busqueda");
@@ -61,6 +62,19 @@ function inicializarEventos(e) {
 
     var boton = document.getElementById("enviar");
     boton.addEventListener("click", renovar, false);
+}
+
+function inicializarModal(e) {
+    var modal = document.getElementById('myModal');
+    modal.style.display = "block";
+
+    var span = document.getElementsByClassName("close")[0];
+    span.addEventListener("click", ocultarModal, false);
+}
+
+function ocultarModal(e) {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
 }
 
 function buscar(e) {
@@ -237,105 +251,3 @@ function renovar(e) {
     document.write("<h1>PedidoEnviado:</h1> " + nombre);
 }
 
-// if(boton.id.localeCompare("Convenios")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 1) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-
-// if(boton.id.localeCompare("Colegiacion")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 2) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-
-// if(boton.id.localeCompare("Contratos")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 3) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-
-// if(boton.id.localeCompare("Formacion")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 4) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-
-// if(boton.id.localeCompare("Bolsa")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 5) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-
-// if(boton.id.localeCompare("Contacto")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 6) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-
-// if(boton.id.localeCompare("Cookies")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 7) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-
-// if(boton.id.localeCompare("Privacidad")){
-//     for(var i = 0; i < array.length; i++){
-//         if (i != 8) {
-//             document.getElementById(array[i]).style.display = "none";
-//         }
-//     }
-// }
-// document.getElementById("subConvenios").style.display = "none";
-// document.getElementById("subColegiacion").style.display = "none";
-// document.getElementById("subContratos").style.display = "none";
-// document.getElementById("subFormacion").style.display = "none";
-// document.getElementById("subBolsa").style.display = "none";    
-
-// }// else if(boton.id == "Convenios"){
-
-// }else if(boton.id == "Colegiacion"){
-
-// }else if(boton.id == "Contratos"){
-
-// }else if(boton.id == "Formacion"){
-
-// }else if(boton.id == "Bolsa"){
-
-// }else if(boton.id == "Contacto"){
-
-// }
-
-
-// window.addEventListener('load',inicializarEventos,false);
-
-// function inicializarEventos(e)
-// {
-//   var boton1=document.getElementById('b1');
-//   boton1.addEventListener('click',presionBoton,false);  
-//   var boton2=document.getElementById('b2');
-//   boton2.addEventListener('click',presionBoton,false);  
-// }
-
-// function presionBoton(e)
-// {
-//   var boton=e.target;
-//   var ref=document.getElementById('titulo');
-//   ref.firstChild.nodeValue='Name:'+boton.name+' Id:'+boton.id+' Value:'+boton.value;
-// }
-
-/* <button onclick="window.location.href='/page2'">Continue</button> */
