@@ -37,7 +37,7 @@
         <!-- Menú principal -->
         <div id="menu" class="navbar">
             <div class="dropdown">
-                <button id="inicio" class="dropbtn">Inicio</button>
+                <a href="#"><button id="inicio" class="dropbtn">Inicio</button></a>
 
                 <!-- Los dropdown son para mostrar las opciones del boton de arriba abajo, se desplieguan poniendo el cursor encima -->
 
@@ -82,10 +82,11 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button id="bolsa" class="dropbtn">Bolsa de empleo</button>
+                <a href="#"><button id="bolsa" class="dropbtn">Bolsa de empleo</button></a>
+
             </div>
             <div class="dropdown">
-                <button id="contacto" class="dropbtn">Contáctanos</button>
+                <a href="#"><button id="contacto" class="dropbtn">Contáctanos</button></a>
             </div>
 
         </div>
@@ -150,13 +151,10 @@
                         prestar un servicio a la sociedad velando por la calidad y profesionalidad en el ejercicio de
                         nuestro trabajo y promoviendo el respeto de la deontología profesional.</p>
                     <br />
-                    <p>¿Eres Técnico Superior en informática y aún no estás colegiado? Solicita la colegiación
-                        rellenando nuestro <a href="#">formulario online.</a></p>
-                    <!-- formulario online más adelante usaremos para que nos mande a colegiación -->
-                    <p>Entre todos los miembr/os de la Junta de Gobierno coordinamos los servicios que el Colegio
+                    <p>Entre todos los miembros de la Junta de Gobierno coordinamos los servicios que el Colegio
                         presta
                         a colegiados y profesionales y podéis contactar con nosotros para cualquier tema. </p>
-                    <p>Nuestra sede está en Bilbao y podéis consultar en <a href="">contáctanos</a> nuestros datos de
+                    <p>Nuestra sede está en Bilbao y podéis consultar en nuestros datos de
                         contacto
                         completos.</p>
                     <br />
@@ -313,13 +311,12 @@
                         nuestro trabajo y promoviendo el respeto de la deontología profesional.</p>
                     <br />
                     <p>¿Eres Técnico Superior en informática y aún no estás colegiado? Solicita la colegiación
-                        rellenando nuestro <a href="#">formulario online.</a></p>
-                    <!-- formulario online mas adelante usaremos para que nos mande a colegiación -->
-                    <p>Entre todos los miembr/os de la Junta de Gobierno coordinamos los servicios que el Colegio
+                        rellenando nuestro formulario online.</p>
+                    <p>Entre todos los miembrros de la Junta de Gobierno coordinamos los servicios que el Colegio
                         presta
                         a colegiados y profesionales y podéis contactar con nosotros para cualquier tema. </p>
                     <br />
-                    <p>Nuestra sede está en Bilbao y podéis consultar en <a href="#">contáctanos</a> nuestros datos
+                    <p>Nuestra sede está en Bilbao y podéis consultar en nuestros datos
                         de
                         contacto
                         completos.</p>
@@ -358,6 +355,9 @@
                         sus
                         profesionales y la demanda de sus estudiantes en las distintas etapas de vida de la
                         carrera.</p>
+                    <br />
+                    <h3 id="desdeCuando">¿Desde cuándo?</h3>
+                    <p>Desde el día 13 de Noviembre 1978</p>
                     <br />
                     <h3 id="enlaces">Enlaces:</h3>
                     <ul>
@@ -433,46 +433,17 @@
                             acredite estar en posesión del título (cualquiera de los mencionados
                             anteriormente).</li>
                         <li>El DNI o pasaporte o documento equivalente.</li>
-                        <li class="">Una fotografía tamaño carnet</li>
+                        <li>Una fotografía tamaño carnet</li>
                     </ul>
-
-                    <!-- <div id="subInscripcion">
-                        <h1 id="inscripcion">Datos para Inscribirse</h1>
-                        <form id="datosInscripcion" method="get" action="#">
-                            <fieldset>
-                                <legend>Datos personales</legend>
-
-                                <label class="descripcion" for="apellidosynombre">Apellidos y nombre (obligatorio):</label>
-                                <p class="error" id="errorNombre">Este campo es obligatorio</p>
-                                <input class="texto" id="apellidosynombre" type="text" size="60" />
-
-                                <label class="descripcion" for="dni">DNI <span class="ejemplo">p.e. 34354345C</span>
-                                    (obligatorio):</label>
-                                <p class="error" id="errorDni">Este campo es obligatorio</p>
-                                <input class="texto" id="dni" type="text" size="60" />
-
-                                <label for="email" class="descripcion">E-mail (obligatorio):</label>
-                                <p class="error" id="errorEmail">Este campo es obligatorio</p>
-                                <input type="text" class="textbox" id="email" size="60" />
-
-                                <label class="descripcion" for="direccion"> Dirección (obligatorio):</label>
-                                <p class="error" id="errorDireccion">Este campo es obligatorio</p>
-                                <input name="direccion" type="text" size="60" id="direccion" />
-
-                                <label class="descripcion" for="poblacion">Población (obligatorio):</label>
-                                <p class="error" id="errorPoblacion">Este campo es obligatorio</p>
-                                <input name="poblacion" type="text" size="60" id="poblacion" />
-
-                                <label class="descripcion" for="cp"> Código postal (obligatorio):</label>
-                                <p class="error" id="errorCp">Este campo es obligatorio</p>
-                                <input name="cp" type="text" size="20" maxlength="5" id="cp" />
-                            </fieldset>
-
-                            <div>
-                                <a href="informacion.html"><input type="submit" name="enviar" value="Enviar pedido" id="enviar" /></a>
-                            </div>
-                        </form>
-                    </div> -->
+                    <div id="subInscripcion">
+                        <h2 id="inscripcion">Requisitos para colegiarte</h2>
+                        <p>En caso de que quieras inscribirte, pulsa en el siguiente enlace y rellena los datos
+                            requeridos y en la caja de comentarios comentanos las dudas.</p>
+                        <div>
+                            <!-- Botón para enviar editado -->
+                            <a id="IDinscripcion2" href="#"><input type="submit" name="enviar" value="Enviar Inscripcion" /></a>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -518,7 +489,7 @@
                                 causa.</p>
 
                             <p>Modelo de Contrato:</p>
-                            <a href="contratos/ContratoTemporal.pdf">Contrato Temporal</a>
+                            <a href="contratos/ContratoTemporal.pdf" target="_blank">Contrato Temporal</a>
                         </li>
 
                         <li id="indefinido">
@@ -574,7 +545,7 @@
                                 tiene derecho al finiquito, como cuando finaliza cualquier otro tipo de
                                 contrato.</p>
                             <p>Modelo de Contrato:</p>
-                            <a href="contratos/ContratoIndefinido.pdf">Contrato Indefinido</a>
+                            <a href="contratos/ContratoIndefinido.pdf" target="_blank">Contrato Indefinido</a>
                         </li>
 
                         <li id="practicas">
@@ -671,7 +642,7 @@
                                 empresarial a la Seguridad Social de hasta el 50%.</p>
 
                             <p>Modelo de Contrato:</p>
-                            <a href="contratos/ContratoPracticas.pdf">Contrato de Prácticas</a>
+                            <a href="contratos/ContratoPracticas.pdf" target="_blank">Contrato de Prácticas</a>
                         </li>
 
                         <li>
@@ -1186,7 +1157,6 @@
                     <form id="datosPedido" method="get" action="#">
                         <fieldset>
                             <!-- Con los p class=error creamos la obligatoriedad de rellenar los campos en el JavaScript -->
-
                             <legend>Datos personales</legend>
                             <label class="descripcion" for="apellidosynombre">Apellidos y nombre (obligatorio):</label>
                             <p class="error" id="errorNombre">Este campo es obligatorio</p>
@@ -1211,13 +1181,16 @@
 
                             <label class="descripcion" for="cp"> Código postal (obligatorio):</label>
                             <p class="error" id="errorCp">Este campo es obligatorio</p>
-                            <input name="cp" type="text" size="20" maxlength="5" id="cp" />
-                             <br />
-                            <textarea rows="4" cols="50"></textarea>
+                            <input name="cp" type="text" size="60" maxlength="5" id="cp" />
+                            <label class="descripcion" for="comentarios">Indica sobre qué va tu consulta:</label>
+
+                            <textarea rows="4" cols="50">
+
+                            </textarea>
                         </fieldset>
                         <div>
                             <!-- Con esto enviamos la información. -->
-                            <a href="informacion.html"><input type="submit" name="enviar" value="Enviar pedido" id="enviar" /></a>
+                            <a href="informacion.html"><input type="submit" name="enviar" value="Enviar" id="enviar" /></a>
                         </div>
                     </form>
                 </div>
@@ -1320,7 +1293,7 @@
                         2. Haga click en Privacidad.<br />
                         3. Mueva el deslizador hasta ajustar el nivel de privacidad que desee.</p>
                     <p>&#8211; <strong>Chrome</strong>: <a href="https://support.google.com/chrome/answer/95647?hl=es"
-                            target="_blank">https://support.google.com/chrome/answer/95647?hl=es</a><br />
+                            target="_blank">Administrar Cookies en Chrome</a><br />
                         Para acceder a la configuración de cookies del navegador Chrome siga estos pasos (pueden variar
                         en función de la versión del navegador):</p>
                     <p>1. Vaya a Configuración o Preferencias mediante el menú Archivo o bien pinchando el icono de
@@ -1527,16 +1500,20 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>Dokkanea mientras puedas</p>
+                <img src="logo-modal.jpg" alt="logo modal">
             </div>
 
         </div><!-- /Modal -->
 
     </div>
     <!-- /Contenedor -->
-    <!-- Para dispositivos moviles -->
-    <h1 class="Construccion">En construcción</h1>
-    <img src="Atras.jpg" class="Construccion" id="Signo" />
+    <!-- Para dispositivos móviles -->
+
+    <div>
+        <h1 class="construccion">En construcción</h1>
+        <img src="Atras.jpg" class="construccion" id="Signo" />
+    </div>
+
 
 </body>
 

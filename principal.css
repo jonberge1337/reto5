@@ -1,4 +1,4 @@
-.Construccion {
+.construccion {
     display: none;
 }
 
@@ -404,8 +404,20 @@ fieldset>input,
 #formacion,
 #bolsa,
 #contacto,
-#busqueda {
+#busqueda,
+#IDinscripcion2 input {
     border-radius: 20px 20px 20px 20px;
+}
+
+#subConvenios,
+#subColegiacion,
+#subContratos,
+#subFormacion,
+#subBolsa,
+#subCookies,
+#subPrivacidad,
+#subContacto{
+    display: none;
 }
 
 label.descripcion {

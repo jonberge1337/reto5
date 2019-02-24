@@ -29,8 +29,8 @@ function inicializarEventos(e) {
     var colegiacion = document.getElementById("IDrequisitos");
     colegiacion.addEventListener("click", ocultar, false);
 
-    var colegiacion = document.getElementById("IDinscripcion");
-    colegiacion.addEventListener("click", ocultar, false);
+    var inscripcion = document.getElementById("IDinscripcion");
+    inscripcion.addEventListener("click", ocultar, false);
 
     var contratos = document.getElementById("contratos");
     contratos.addEventListener("click", ocultar, false);
@@ -59,11 +59,14 @@ function inicializarEventos(e) {
     var contacto = document.getElementById("contacto");
     contacto.addEventListener("click", ocultar, false);
 
-    var contacto = document.getElementById("cookies");
-    contacto.addEventListener("click", ocultar, false);
+    var inscripcionDos = document.getElementById("IDinscripcion2");
+    inscripcionDos.addEventListener("click", ocultar, false);
 
-    var contacto = document.getElementById("privacidad");
-    contacto.addEventListener("click", ocultar, false);
+    var cookies = document.getElementById("cookies");
+    cookies.addEventListener("click", ocultar, false);
+
+    var privacidad = document.getElementById("privacidad");
+    privacidad.addEventListener("click", ocultar, false);
 
     var nombre = document.getElementById("apellidosynombre");
     nombre.addEventListener("blur", verificarNombre, false);
@@ -89,12 +92,6 @@ function inicializarEventos(e) {
     cp.addEventListener("blur", verificarCp, false);
     cp.addEventListener("focus", reiniciarCp, false);
 
-    // var card = document.getElementById("card");
-    // card.addEventListener("blur", verificarCard, false);
-    // card.addEventListener("focus", reiniciarCard, false);
-
-    var boton = document.getElementById("enviar");
-    boton.addEventListener("click", renovar, false);
 }
 
 function inicializarModal(e) {
@@ -135,7 +132,7 @@ function ocultar(e) {
     } else if (boton.id == "convenios" || boton.id == "IDconQuien" || boton.id == "IDdesdeCuando" || boton.id == "IDenlaces") {
         document.getElementById("subConvenios").style.display = "inline";
 
-    } else if (boton.id == "colegiacion" || boton.id == "IDrequisitos" || boton.id == "IDinscripcion" || boton.id == "IDrazones") {
+    } else if (boton.id == "colegiacion" || boton.id == "IDrequisitos" || boton.id == "IDrazones" || boton.id == "IDinscripcion") {
         document.getElementById("subColegiacion").style.display = "inline";
 
     } else if (boton.id == "contratos" || boton.id == "IDtemporal" || boton.id == "IDindefinido" || boton.id == "IDpracticas") {
@@ -147,7 +144,7 @@ function ocultar(e) {
     } else if (boton.id == "bolsa") {
         document.getElementById("subBolsa").style.display = "inline";
 
-    } else if (boton.id == "contacto") {
+    } else if (boton.id == "contacto" || boton.id == "IDinscripcion2") {
         document.getElementById("subContacto").style.display = "inline";
 
     } else if (boton.id == "cookies") {
@@ -260,12 +257,3 @@ function reiniciarCp() {
         x.style.display = "none";
     }
 }
-
-
-function renovar(e) {
-    var x = document.getElementById("principal");
-    var nombre = document.getElementById("apellidosynombre").value;
-    x.style.visibility = "hidden"
-    document.write("<h1>PedidoEnviado:</h1> " + nombre);
-}
-
