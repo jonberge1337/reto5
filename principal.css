@@ -377,7 +377,11 @@ body {
 }
 
 
-@media screen and (max-width: 1024px) and (max-height: 615px) {}
+@media screen and (max-width: 1024px) and (max-height: 615px) {
+    .modal-content img {
+        width: 100%
+    }
+}
 
 /* #convenios, luego hay que descomentar para que no veamos la página entera desde el principio
 #colegiacion,
@@ -405,7 +409,7 @@ fieldset>input,
 #bolsa,
 #contacto,
 #busqueda,
-#IDinscripcion2 input {
+#IDinscripcion2 {
     border-radius: 20px 20px 20px 20px;
 }
 
